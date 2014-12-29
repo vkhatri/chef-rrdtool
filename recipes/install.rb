@@ -18,7 +18,7 @@
 #
 
 packages = value_for_platform_family(
-  'debian' => %w(rrdtool librrds-perl),
+  'debian' => %w(make rrdtool librrds-perl g++ php5-cli php5-gd libapache2-mod-php5),
   'rhel' => %w(php php-gd php-pdo php-common php-devel rrdtool rrdtool-devel perl-Time-HiRes libtool-ltdl rrdtool-php rrdtool-perl)
 )
 
