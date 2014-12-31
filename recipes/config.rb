@@ -27,6 +27,7 @@ template ::File.join(platform_sysconfig, 'rrdcached') do
   owner 'root'
   group 'root'
   mode 0744
+  notifies :restart, 'service[rrdcached]', :delayed
   variables(:group => node['rrdtool']['group'],
             :user => node['rrdtool']['user'],
             :timeout => node['rrdtool']['timeout'],
@@ -47,6 +48,7 @@ template '/etc/init.d/rrdcached' do
   owner 'root'
   group 'root'
   mode 0744
+  notifies :restart, 'service[rrdcached]', :delayed
   variables(:home_dir => node['rrdtool']['home_dir'], :rrdcached_bin => node['rrdtool']['rrdcached_bin'])
 end
 
