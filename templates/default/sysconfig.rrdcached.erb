@@ -4,5 +4,5 @@
 #
 # Settings for rrdcached
 
-OPTIONS="-w <%= @timeout -%> -z <%= @delay -%> -f <%= @flush_timer -%> -t <%= @write_threads -%> -l <%= @listen -%> -s <%= @group -%> -m <%= @perms -%> -b <%= @rrdcached_dir -%> j <%= @journal_dir -%> -p <%= @home_dir -%>/rrdcached.pid <%= @options.join(' ') -%>"
+OPTIONS="-w <%= @timeout -%> -z <%= @delay -%> -f <%= @flush_timer -%> -t <%= @write_threads -%> -l <%= @listen -%> -s <%= @group -%> -m <%= @perms -%> -b <%= @rrdcached_dir -%> -j <%= @journal_dir -%> -p <%= @home_dir -%>/rrdcached.pid <%= @options.join(' ') -%>"
 RRDC_USER=<%= @user %>
