@@ -3,6 +3,14 @@ rrdtool CHANGELOG
 
 This file is used to list changes made in each version of the rrdtool cookbook.
 
+0.1.7
+-----
+
+- Virender Khatri - rrdcached setup is optional now
+
+- Virender Khatri - added Gemfile.lock in favour of travis
+
+
 0.1.4
 -----
 

@@ -22,6 +22,8 @@ https://github.com/vkhatri/chef-rrdtool
 
 ## Attributes
 
+* `default['rrdtool']['setup_rrdcached']` (default: `true`): whether to setup rrdcached
+
 * `default['rrdtool']['user']` (default: `nagios`): rrdtool files/socket user
 
 * `default['rrdtool']['group']` (default: `nagios`): rrdtool files/socket group
