@@ -18,4 +18,4 @@
 #
 
 include_recipe 'rrdtool::install'
-include_recipe 'rrdtool::config'
+include_recipe 'rrdtool::rrdcached'

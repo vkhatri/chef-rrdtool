@@ -6,6 +6,7 @@ default['rrdtool']['timeout'] = 120
 default['rrdtool']['flush_timer'] = 300
 default['rrdtool']['delay'] = 120
 default['rrdtool']['write_threads'] = 4
+default['rrdtool']['setup_rrdcached'] = true
 
 default['rrdtool']['rrdcached_bin'] = '/usr/bin/rrdcached'
 

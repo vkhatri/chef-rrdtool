@@ -41,6 +41,7 @@ template ::File.join(platform_sysconfig, 'rrdcached') do
             :journal_dir => node['rrdtool']['journal_dir'],
             :options => node['rrdtool']['options']
            )
+  only_if { node['rrdtool']['setup_rrdcached'] }
 end
 
 template '/etc/init.d/rrdcached' do
@@ -50,9 +51,11 @@ template '/etc/init.d/rrdcached' do
   mode 0744
   notifies :restart, 'service[rrdcached]', :delayed
   variables(:home_dir => node['rrdtool']['home_dir'], :rrdcached_bin => node['rrdtool']['rrdcached_bin'])
+  only_if { node['rrdtool']['setup_rrdcached'] }
 end
 
 service 'rrdcached' do
   supports :restart => true
   action [:enable, :start]
+  only_if { node['rrdtool']['setup_rrdcached'] }
 end
