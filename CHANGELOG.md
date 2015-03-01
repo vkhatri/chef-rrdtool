@@ -8,7 +8,7 @@ This file is used to list changes made in each version of the rrdtool cookbook.
 
 - Virender Khatri - rrdcached setup is optional now
 
-- Virender Khatri - added Gemfile.lock in favour of travis
+- Virender Khatri - disabled knife temporarily in favour of travis
 
 
 0.1.4
