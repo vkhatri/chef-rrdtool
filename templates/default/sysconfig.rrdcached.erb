@@ -6,3 +6,17 @@
 
 OPTIONS="-w <%= @timeout -%> -z <%= @delay -%> -f <%= @flush_timer -%> -t <%= @write_threads -%> -l <%= @listen -%> -s <%= @group -%> -m <%= @perms -%> -b <%= @rrdcached_dir -%> -j <%= @journal_dir -%> -p <%= @home_dir -%>/rrdcached.pid <%= @options.join(' ') -%>"
 RRDC_USER=<%= @user %>
+
+# 0: start rrdcached on boot, 1: do not start rrdcached on boot
+# default: 0
+DISABLE=0
+
+# number of seconds to wait for rrdcached to shut down
+# (writing the data to disk may take some time;
+# tune this according to your setup)
+# default: 30
+MAXWAIT=30
+
+# 0: do not enable core-files, 1: enable core-files ... if rrdcached crashes
+# default: 0
+ENABLE_COREFILES=0
