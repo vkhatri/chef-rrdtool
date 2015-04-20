@@ -17,11 +17,6 @@
 # limitations under the License.
 #
 
-packages = value_for_platform_family(
-  'debian' => %w(make rrdtool librrds-perl g++ php5-cli php5-gd libapache2-mod-php5),
-  'rhel' => %w(php php-gd php-pdo php-common php-devel rrdtool rrdtool-devel perl-Time-HiRes libtool-ltdl rrdtool-php rrdtool-perl)
-)
-
 [node['rrdtool']['home_dir'],
  node['rrdtool']['rrdcached_dir'],
  node['rrdtool']['journal_dir']
@@ -33,6 +28,6 @@ packages = value_for_platform_family(
   end
 end
 
-packages.each do |p|
+default['rrdtool']['packages'].each do |p|
   package p
 end
