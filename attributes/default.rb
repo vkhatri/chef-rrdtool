@@ -19,6 +19,6 @@ default['rrdtool']['listen'] = "unix:#{node['rrdtool']['home_dir']}/rrdcached.so
 default['rrdtool']['options'] = []
 
 default['rrdtool']['packages'] = value_for_platform_family(
-  'debian' => %w(make rrdtool librrds-perl g++ php5-cli php5-gd libapache2-mod-php5),
+  'debian' => %w(make rrdtool librrds-perl g++ php5-cli php5-gd libapache2-mod-php5 rrdcached),
   'rhel' => %w(php php-gd php-pdo php-common php-devel rrdtool rrdtool-devel perl-Time-HiRes libtool-ltdl rrdtool-php rrdtool-perl)
 )
