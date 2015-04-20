@@ -3,7 +3,7 @@ rrdtool Cookbook
 
 [![Build Status](https://travis-ci.org/vkhatri/chef-rrdtool.svg?branch=master)](https://travis-ci.org/vkhatri/chef-rrdtool)
 
-This is a [Chef] cookbook to manage [RRDTool] using LWRP.
+This is a [Chef] cookbook to manage [RRDTool] and rrdcached.
 
 
 ## Repository
@@ -21,6 +21,8 @@ https://github.com/vkhatri/chef-rrdtool
 
 
 ## Attributes
+
+* `default['rrdtool']['packages']` (default: `calculated`): rrdtool packages
 
 * `default['rrdtool']['setup_rrdcached']` (default: `true`): whether to setup rrdcached
 

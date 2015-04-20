@@ -3,6 +3,15 @@ rrdtool CHANGELOG
 
 This file is used to list changes made in each version of the rrdtool cookbook.
 
+0.2.0
+-----
+
+- Virender Khatri - added rrdcached init scripts for debian platform family
+
+- Virender Khatri - added node attribute for packages install
+
+- Virender Khatri - added rrdcached package
+
 0.1.7
 -----
 
