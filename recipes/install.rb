@@ -28,6 +28,6 @@
   end
 end
 
-default['rrdtool']['packages'].each do |p|
+node['rrdtool']['packages'].each do |p|
   package p
 end
