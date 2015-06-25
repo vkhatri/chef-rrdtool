@@ -6,10 +6,8 @@
     <title>Chef-rrdtool by vkhatri</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
+    <link rel="stylesheet" href="stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -19,7 +17,10 @@
       <header>
         <h1>Chef-rrdtool</h1>
         <p>Chef Cookbook to Install/Configure rrdtool (rrdcached)</p>
+
         <p class="view"><a href="https://github.com/vkhatri/chef-rrdtool">View the Project on GitHub <small>vkhatri/chef-rrdtool</small></a></p>
+
+
         <ul>
           <li><a href="https://github.com/vkhatri/chef-rrdtool/zipball/master">Download <strong>ZIP File</strong></a></li>
           <li><a href="https://github.com/vkhatri/chef-rrdtool/tarball/master">Download <strong>TAR Ball</strong></a></li>
@@ -32,7 +33,7 @@
 
 <p><a href="https://travis-ci.org/vkhatri/chef-rrdtool"><img src="https://travis-ci.org/vkhatri/chef-rrdtool.svg?branch=master" alt="Build Status"></a></p>
 
-<p>This is a <a href="https://www.chef.io/">Chef</a> cookbook to manage <a href="http://oss.oetiker.ch/rrdtool/">RRDTool</a> using LWRP.</p>
+<p>This is a <a href="https://www.chef.io/">Chef</a> cookbook to manage <a href="http://oss.oetiker.ch/rrdtool/">RRDTool</a> and rrdcached.</p>
 
 <h2>
 <a id="repository" class="anchor" href="#repository" aria-hidden="true"><span class="octicon octicon-link"></span></a>Repository</h2>
@@ -52,6 +53,8 @@
 <a id="attributes" class="anchor" href="#attributes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Attributes</h2>
 
 <ul>
+<li><p><code>default['rrdtool']['packages']</code> (default: <code>calculated</code>): rrdtool packages</p></li>
+<li><p><code>default['rrdtool']['setup_rrdcached']</code> (default: <code>true</code>): whether to setup rrdcached</p></li>
 <li><p><code>default['rrdtool']['user']</code> (default: <code>nagios</code>): rrdtool files/socket user</p></li>
 <li><p><code>default['rrdtool']['group']</code> (default: <code>nagios</code>): rrdtool files/socket group</p></li>
 <li><p><code>default['rrdtool']['perms']</code> (default: <code>0774</code>): rrdtool files/socket permissions</p></li>
@@ -101,12 +104,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 </pre>
       </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/vkhatri">vkhatri</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
     </div>
-    <footer>
-      <p>Project maintained by <a href="https://github.com/vkhatri">vkhatri</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    <script src="javascripts/scale.fix.js"></script>
     
   </body>
 </html>
